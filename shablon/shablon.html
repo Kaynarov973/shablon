@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dior - Мир парфюмерии</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f7f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #a67c52;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-icons a {
+            color: #333;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .header-icons a:hover {
+            color: #a67c52;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #a67c52;
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #8a623c;
+        }
+        
+        /* Collections Section */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 300;
+            margin: 70px 0 40px;
+            letter-spacing: 1.5px;
+        }
+        
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .collection-item {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .collection-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .collection-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .collection-info {
+            padding: 25px;
+        }
+        
+        .collection-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .collection-info p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .price {
+            font-weight: 600;
+            color: #a67c52;
+            font-size: 18px;
+        }
+        
+        /* Featured Perfume */
+        .featured {
+            display: flex;
+            background-color: white;
+            margin-bottom: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .featured-img {
+            flex: 1;
+            min-height: 500px;
+            background: url('https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+        }
+        
+        .featured-info {
+            flex: 1;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-info h2 {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .featured-info p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #a67c52;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: #aaa;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #a67c52;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .featured {
+                flex-direction: column;
+            }
+            
+            .featured-img {
+                min-height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .collections {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">DI<span>OR</span></a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#collections">Коллекции</a></li>
+                    <li><a href="#featured">Бестселлеры</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>DIOR ПАРФЮМЕРИЯ</h1>
+            <p>Откройте для себя мир изысканных ароматов Christian Dior, созданных мастерами парфюмерного искусства. Каждый флакон — это история элегантности и роскоши.</p>
+            <a href="#collections" class="btn">Исследовать коллекцию</a>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="container">
+        <h2 class="section-title" id="collections">ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
+        
+        <div class="collections">
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="J'adore" class="collection-img">
+                <div class="collection-info">
+                    <h3>J'adore</h3>
+                    <p>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина. Символ женственности и элегантности.</p>
+                    <div class="price">от 8 500 ₽</div>
+                </div>
+            </div>
+            
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sauvage" class="collection-img">
+                <div class="collection-info">
+                    <h3>Sauvage</h3>
+                    <p>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса. Воплощение свободы и дикой природы.</p>
+                    <div class="price">от 7 900 ₽</div>
+                </div>
+            </div>
+            
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1543858741-6c2b3a4c7205?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Miss Dior" class="collection-img">
+                <div class="collection-info">
+                    <h3>Miss Dior</h3>
+                    <p>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры. Идеальное сочетание смелости и нежности.</p>
+                    <div class="price">от 9 200 ₽</div>
+                </div>
+            </div>
+            
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Homme" class="collection-img">
+                <div class="collection-info">
+                    <h3>Homme</h3>
+                    <p>Утонченный мужской аромат с древесными и пряными нотами. Сочетает в себе элегантность и современность.</p>
+                    <div class="price">от 8 100 ₽</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Perfume -->
+    <section class="container" id="featured">
+        <div class="featured">
+            <div class="featured-img"></div>
+            <div class="featured-info">
+                <h2>SAUVAGE ELIXIR</h2>
+                <p>Новейшая интерпретация культового аромата Sauvage. Более интенсивная, богатая и стойкая версия с нотами лаванды, бергамота и сандала.</p>
+                <p>Elixir раскрывает новые грани оригинального аромата, предлагая более глубокое и продолжительное звучание. Идеальный выбор для особых occasions.</p>
+                <a href="#" class="btn">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DIOR</h3>
+                    <p>Мировое признание в области высокой парфюмерии с 1947 года. Каждый аромат — это произведение искусства, созданное с безупречным вниманием к деталям.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Коллекции</h3>
+                    <ul>
+                        <li><a href="#">Женские ароматы</a></li>
+                        <li><a href="#">Мужские ароматы</a></li>
+                        <li><a href="#">Интенсивные версии</a></li>
+                        <li><a href="#">Лимитированные издания</a></li>
+                        <li><a href="#">Подарочные наборы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                        <li><a href="#">Помощь в выборе</a></li>
+                        <li><a href="#">Контакты магазинов</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская, 10</li>
+                        <li><i class="fas fa-phone"></i> 8 (800) 555-35-35</li>
+                        <li><i class="fas fa-envelope"></i> info@dior-ru.com</li>
+                        <li><i class="fas fa-clock"></i> Пн-Вс: 10:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Christian Dior Parfums. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Плавная прокрутка для навигационных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Анимация появления элементов при прокрутке
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Назначаем анимацию на элементы коллекций и featured
+        document.querySelectorAll('.collection-item, .featured').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
