@@ -349,7 +349,16 @@
     <script type="application/ld+json">
 
 {
-  "@context": "https://schema.org", //ресурс schema.org
+  "@context": "https://schema.org"
+    "@type": "BreadcrumbList"
+  "itemListElement":
+    {
+      "@type": "ListItem", //элемент списка
+      "position": 1, //нумерация позиций
+      "name": "Парфюмерия", //название
+      "item": https://shablon-2fc7.vercel.app/
+    }
+
     "@type": "Organization",
   "name": "Apple.inc",
   "address": {
@@ -357,24 +366,48 @@
     "streetAddress": "Sovetsky pr",
     "postalCode": "CA 95014",
     "addressLocality": "Ivanteevka"
-  },
+  }
   "telephone": "+799999999",
   "email": "grrgrr@gmail.com",
-  "@graph": [ //сразу несколько типов
-    {//тип 1
-      "@type": "WebPage", //описание что за сайт
+  "@graph": 
+    {
+      "@type": "WebPage", 
       "name": "SEO Блог",
       "description": "Практические советы по SEO и продвижению бизнеса",
-      "url": "https://resultup.agency/blog"
-    },
-    {//тип 2
-      "@type": "Blog", //описание блога (на странице блога использовать)
-      "name": "SEO Meat блог",
-      "description": "Обучение и материалы по SEO-оптимизации",
-      "url": "https://seomeat.ru/blog"
-    }
-  ]
+      "url": "https://shablon-2fc7.vercel.app/"
+  }
 }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList", //тип списков
+  "name": "Полезные разделы сайта",
+  "itemListElement":
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Подбор домена",
+      "url": "https://shablon-2fc7.vercel.app/"
+    }
+}
+   
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage", //
+  "mainEntity": [ 
+    {
+      "@type": "Question", //тип вопрос ответ
+      "name": "Как купить духи?",
+      "acceptedAnswer": { 
+        "@type": "Answer"
+        "text": "Перейдите в раздел Купить и выберите подходящую парфюмерию."
+      }
+    }
+}
+    
 </script>
 </head>
 <body>
