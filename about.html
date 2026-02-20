@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dior - Мир парфюмерии 🐘</title>
+    <title>Dior - О нас</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <meta property="og:title" content="Лучший сайт парфюмерии-DIOR ПАРФЮМЕРИЯ">
-    <meta property="og:description" content="Духи и парфюмерия в Москве по доступным ценам">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="DIOR">
     <style>
         * {
             margin: 0;
@@ -103,7 +92,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1528720208104-3d9bd03cc9d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -143,95 +132,65 @@
             background-color: #8a623c;
         }
         
-        /* Collections Section */
-        .section-title {
-            text-align: center;
-            font-size: 32px;
+        /* About Section */
+        .about-section {
+            display: flex;
+            gap: 50px;
+            margin: 80px 0;
+            align-items: center;
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
             font-weight: 300;
-            margin: 70px 0 40px;
-            letter-spacing: 1.5px;
+            margin-bottom: 30px;
         }
         
-        .collections {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        
-        .collection-item {
-            background-color: white;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .collection-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .collection-img {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-        .collection-info {
-            padding: 25px;
-        }
-        
-        .collection-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .collection-info p {
+        .about-content p {
+            margin-bottom: 20px;
             color: #666;
-            margin-bottom: 15px;
-            font-size: 15px;
         }
         
-        .price {
-            font-weight: 600;
+        .about-image {
+            flex: 1;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            border-radius: 5px;
+        }
+        
+        /* Values */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .value-item i {
+            font-size: 48px;
             color: #a67c52;
-            font-size: 18px;
-        }
-        
-        /* Featured Perfume */
-        .featured {
-            display: flex;
-            background-color: white;
-            margin-bottom: 80px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        .featured-img {
-            flex: 1;
-            min-height: 500px;
-            background: url('https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-        }
-        
-        .featured-info {
-            flex: 1;
-            padding: 60px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .featured-info h2 {
-            font-size: 32px;
-            font-weight: 300;
             margin-bottom: 20px;
         }
         
-        .featured-info p {
+        .value-item h3 {
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .value-item p {
             color: #666;
-            margin-bottom: 30px;
-            line-height: 1.8;
         }
         
         /* Footer */
@@ -298,14 +257,23 @@
             font-size: 14px;
         }
         
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 300;
+            margin: 70px 0 40px;
+            letter-spacing: 1.5px;
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
-            .featured {
+            .about-section {
                 flex-direction: column;
             }
             
-            .featured-img {
-                min-height: 400px;
+            .about-image {
+                width: 100%;
             }
         }
         
@@ -329,20 +297,6 @@
             
             .hero p {
                 font-size: 18px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .collections {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .hero {
-                padding: 70px 0;
             }
         }
     </style>
@@ -373,64 +327,52 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>DIOR ПАРФЮМЕРИЯ</h1>
-            <p>Откройте для себя мир изысканных ароматов Christian Dior, созданных мастерами парфюмерного искусства. Каждый флакон — это история элегантности и роскоши.</p>
-            <a href="collections.html" class="btn">Исследовать коллекцию</a>
+            <h1>О НАС</h1>
+            <p>История дома Christian Dior и наши ценности. Более 75 лет в мире высокой парфюмерии.</p>
+            <a href="#about" class="btn">Узнать историю</a>
         </div>
     </section>
 
-    <!-- Collections Section -->
+    <!-- About Section -->
+    <section class="container" id="about">
+        <div class="about-section">
+            <div class="about-content">
+                <h2>НАСЛЕДИЕ ЭЛЕГАНТНОСТИ</h2>
+                <p>Christian Dior — это не просто бренд, это целая философия красоты и роскоши. Основанный в 1947 году Кристианом Диором, дом моды быстро завоевал признание благодаря своему революционному стилю "New Look", который вернул миру женственность после военных лет.</p>
+                <p>Сегодня Dior Parfums продолжает традиции основателя, создавая ароматы, которые становятся легендами. Каждый флакон — это результат кропотливой работы парфюмеров, которые сочетают редкие ингредиенты с современными технологиями.</p>
+                <p>Мы гордимся тем, что наши ароматы выбирают миллионы людей по всему миру. От классических композиций до смелых экспериментальных новинок — Dior всегда остается синонимом безупречного вкуса и качества.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
     <section class="container">
-        <h2 class="section-title">ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
+        <h2 class="section-title">НАШИ ЦЕННОСТИ</h2>
         
-        <div class="collections">
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="J'adore" class="collection-img">
-                <div class="collection-info">
-                    <h3>J'adore</h3>
-                    <p>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина. Символ женственности и элегантности.</p>
-                    <div class="price">от 8 500 ₽</div>
-                </div>
+        <div class="values">
+            <div class="value-item">
+                <i class="fas fa-crown"></i>
+                <h3>Исключительное качество</h3>
+                <p>Мы используем только лучшие ингредиенты со всего мира. Каждая партия сырья проходит строгий контроль качества.</p>
             </div>
             
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sauvage" class="collection-img">
-                <div class="collection-info">
-                    <h3>Sauvage</h3>
-                    <p>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса. Воплощение свободы и дикой природы.</p>
-                    <div class="price">от 7 900 ₽</div>
-                </div>
+            <div class="value-item">
+                <i class="fas fa-leaf"></i>
+                <h3>Экологичность</h3>
+                <p>Мы заботимся об окружающей среде и поддерживаем устойчивое развитие. Наши ингредиенты получены из возобновляемых источников.</p>
             </div>
             
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1543858741-6c2b3a4c7205?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Miss Dior" class="collection-img">
-                <div class="collection-info">
-                    <h3>Miss Dior</h3>
-                    <p>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры. Идеальное сочетание смелости и нежности.</p>
-                    <div class="price">от 9 200 ₽</div>
-                </div>
+            <div class="value-item">
+                <i class="fas fa-heart"></i>
+                <h3>Любовь к деталям</h3>
+                <p>Каждый флакон разрабатывается с вниманием к мельчайшим деталям, от формы до этикетки, чтобы дарить эстетическое удовольствие.</p>
             </div>
             
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Homme" class="collection-img">
-                <div class="collection-info">
-                    <h3>Homme</h3>
-                    <p>Утонченный мужской аромат с древесными и пряными нотами. Сочетает в себе элегантность и современность.</p>
-                    <div class="price">от 8 100 ₽</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Perfume -->
-    <section class="container">
-        <div class="featured">
-            <div class="featured-img"></div>
-            <div class="featured-info">
-                <h2>SAUVAGE ELIXIR</h2>
-                <p>Новейшая интерпретация культового аромата Sauvage. Более интенсивная, богатая и стойкая версия с нотами лаванды, бергамота и сандала.</p>
-                <p>Elixir раскрывает новые грани оригинального аромата, предлагая более глубокое и продолжительное звучание. Идеальный выбор для особых случаев.</p>
-                <a href="bestsellers.html" class="btn">Узнать больше</a>
+            <div class="value-item">
+                <i class="fas fa-flask"></i>
+                <h3>Инновации</h3>
+                <p>Мы постоянно исследуем новые технологии в парфюмерии, чтобы создавать уникальные и стойкие ароматы.</p>
             </div>
         </div>
     </section>
@@ -506,29 +448,6 @@
                     });
                 }
             });
-        });
-        
-        // Анимация появления элементов при прокрутке
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Назначаем анимацию на элементы коллекций и featured
-        document.querySelectorAll('.collection-item, .featured').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(el);
         });
     </script>
 </body>

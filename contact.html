@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dior - Мир парфюмерии 🐘</title>
+    <title>Dior - Контакты</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <meta property="og:title" content="Лучший сайт парфюмерии-DIOR ПАРФЮМЕРИЯ">
-    <meta property="og:description" content="Духи и парфюмерия в Москве по доступным ценам">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="DIOR">
     <style>
         * {
             margin: 0;
@@ -103,7 +92,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -143,95 +132,100 @@
             background-color: #8a623c;
         }
         
-        /* Collections Section */
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 300;
-            margin: 70px 0 40px;
-            letter-spacing: 1.5px;
-        }
-        
-        .collections {
+        /* Contact Grid */
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 80px 0;
         }
         
-        .collection-item {
-            background-color: white;
+        .contact-info {
+            background: white;
+            padding: 40px;
             border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        .collection-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
         
-        .collection-img {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;
+        .info-item i {
+            font-size: 24px;
+            color: #a67c52;
+            margin-right: 20px;
+            width: 30px;
         }
         
-        .collection-info {
-            padding: 25px;
-        }
-        
-        .collection-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+        .info-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
             font-weight: 500;
         }
         
-        .collection-info p {
+        .info-item p {
             color: #666;
-            margin-bottom: 15px;
-            font-size: 15px;
         }
         
-        .price {
-            font-weight: 600;
-            color: #a67c52;
-            font-size: 18px;
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        /* Featured Perfume */
-        .featured {
-            display: flex;
-            background-color: white;
-            margin-bottom: 80px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        .featured-img {
-            flex: 1;
-            min-height: 500px;
-            background: url('https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-        }
-        
-        .featured-info {
-            flex: 1;
-            padding: 60px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .featured-info h2 {
-            font-size: 32px;
-            font-weight: 300;
+        .form-group {
             margin-bottom: 20px;
         }
         
-        .featured-info p {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.8;
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #a67c52;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .map {
+            height: 400px;
+            margin-bottom: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         /* Footer */
@@ -298,14 +292,19 @@
             font-size: 14px;
         }
         
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 300;
+            margin: 70px 0 40px;
+            letter-spacing: 1.5px;
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
-            .featured {
-                flex-direction: column;
-            }
-            
-            .featured-img {
-                min-height: 400px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -330,19 +329,9 @@
             .hero p {
                 font-size: 18px;
             }
-        }
-        
-        @media (max-width: 576px) {
-            .collections {
+            
+            .form-row {
                 grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .hero {
-                padding: 70px 0;
             }
         }
     </style>
@@ -373,65 +362,106 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>DIOR ПАРФЮМЕРИЯ</h1>
-            <p>Откройте для себя мир изысканных ароматов Christian Dior, созданных мастерами парфюмерного искусства. Каждый флакон — это история элегантности и роскоши.</p>
-            <a href="collections.html" class="btn">Исследовать коллекцию</a>
+            <h1>КОНТАКТЫ</h1>
+            <p>Всегда рады ответить на ваши вопросы. Свяжитесь с нами любым удобным способом.</p>
+            <a href="#contact-form" class="btn">Написать нам</a>
         </div>
     </section>
 
-    <!-- Collections Section -->
-    <section class="container">
-        <h2 class="section-title">ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
-        
-        <div class="collections">
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="J'adore" class="collection-img">
-                <div class="collection-info">
-                    <h3>J'adore</h3>
-                    <p>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина. Символ женственности и элегантности.</p>
-                    <div class="price">от 8 500 ₽</div>
+    <!-- Contact Section -->
+    <section class="container" id="contact-form">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 style="margin-bottom: 30px; font-weight: 300;">Свяжитесь с нами</h2>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Адрес</h3>
+                        <p>Москва, ул. Тверская, 10<br>Бутик Dior</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Телефон</h3>
+                        <p>8 (800) 555-35-35<br>+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@dior-ru.com<br>support@dior-ru.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Режим работы</h3>
+                        <p>Пн-Вс: 10:00 - 22:00<br>Без выходных</p>
+                    </div>
+                </div>
+                
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
             </div>
             
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sauvage" class="collection-img">
-                <div class="collection-info">
-                    <h3>Sauvage</h3>
-                    <p>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса. Воплощение свободы и дикой природы.</p>
-                    <div class="price">от 7 900 ₽</div>
-                </div>
-            </div>
-            
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1543858741-6c2b3a4c7205?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Miss Dior" class="collection-img">
-                <div class="collection-info">
-                    <h3>Miss Dior</h3>
-                    <p>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры. Идеальное сочетание смелости и нежности.</p>
-                    <div class="price">от 9 200 ₽</div>
-                </div>
-            </div>
-            
-            <div class="collection-item">
-                <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Homme" class="collection-img">
-                <div class="collection-info">
-                    <h3>Homme</h3>
-                    <p>Утонченный мужской аромат с древесными и пряными нотами. Сочетает в себе элегантность и современность.</p>
-                    <div class="price">от 8 100 ₽</div>
-                </div>
+            <div class="contact-form">
+                <h2 style="margin-bottom: 30px; font-weight: 300;">Напишите нам</h2>
+                
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" placeholder="Ваше имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="surname">Фамилия</label>
+                            <input type="text" id="surname" placeholder="Ваша фамилия">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Тема</label>
+                        <input type="text" id="subject" placeholder="Тема сообщения">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Featured Perfume -->
+    <!-- Map Section -->
     <section class="container">
-        <div class="featured">
-            <div class="featured-img"></div>
-            <div class="featured-info">
-                <h2>SAUVAGE ELIXIR</h2>
-                <p>Новейшая интерпретация культового аромата Sauvage. Более интенсивная, богатая и стойкая версия с нотами лаванды, бергамота и сандала.</p>
-                <p>Elixir раскрывает новые грани оригинального аромата, предлагая более глубокое и продолжительное звучание. Идеальный выбор для особых случаев.</p>
-                <a href="bestsellers.html" class="btn">Узнать больше</a>
-            </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.223539115326!2d37.61551431593668!3d55.76021798055498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5c73879abf%3A0x6f6e7b7a9b7a9b7a!2sTverskaya%20St%2C%2010%2C%20Moscow%2C%20Russia%2C%20125009!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -506,29 +536,6 @@
                     });
                 }
             });
-        });
-        
-        // Анимация появления элементов при прокрутке
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Назначаем анимацию на элементы коллекций и featured
-        document.querySelectorAll('.collection-item, .featured').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(el);
         });
     </script>
 </body>

@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dior - Мир парфюмерии 🐘</title>
+    <title>Dior - Бестселлеры</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <meta property="og:title" content="Лучший сайт парфюмерии-DIOR ПАРФЮМЕРИЯ">
-    <meta property="og:description" content="Духи и парфюмерия в Москве по доступным ценам">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="DIOR">
     <style>
         * {
             margin: 0;
@@ -103,7 +92,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1615634260162-20305bcf1b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -298,6 +287,17 @@
             font-size: 14px;
         }
         
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: #a67c52;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
             .featured {
@@ -373,64 +373,70 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>DIOR ПАРФЮМЕРИЯ</h1>
-            <p>Откройте для себя мир изысканных ароматов Christian Dior, созданных мастерами парфюмерного искусства. Каждый флакон — это история элегантности и роскоши.</p>
-            <a href="collections.html" class="btn">Исследовать коллекцию</a>
+            <h1>БЕСТСЕЛЛЕРЫ</h1>
+            <p>Самые популярные ароматы, которые выбирают наши клиенты по всему миру. Хиты продаж и любимые классики.</p>
+            <a href="#bestsellers" class="btn">Смотреть хиты</a>
         </div>
     </section>
 
-    <!-- Collections Section -->
+    <!-- Featured Product -->
     <section class="container">
-        <h2 class="section-title">ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
+        <div class="featured">
+            <div class="featured-img"></div>
+            <div class="featured-info">
+                <span class="badge">ХИТ ПРОДАЖ</span>
+                <h2>SAUVAGE ELIXIR</h2>
+                <p>Новейшая интерпретация культового аромата Sauvage. Более интенсивная, богатая и стойкая версия с нотами лаванды, бергамота и сандала.</p>
+                <p>Elixir раскрывает новые грани оригинального аромата, предлагая более глубокое и продолжительное звучание. Абсолютный лидер продаж.</p>
+                <div class="price" style="margin-bottom: 20px;">12 500 ₽</div>
+                <a href="#" class="btn">Купить</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers Section -->
+    <section class="container">
+        <h2 class="section-title" id="bestsellers">ТОП ПРОДАЖ</h2>
         
         <div class="collections">
             <div class="collection-item">
                 <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="J'adore" class="collection-img">
                 <div class="collection-info">
+                    <span class="badge">№1 Женский</span>
                     <h3>J'adore</h3>
-                    <p>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина. Символ женственности и элегантности.</p>
-                    <div class="price">от 8 500 ₽</div>
+                    <p>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина.</p>
+                    <div class="price">8 500 ₽</div>
                 </div>
             </div>
             
             <div class="collection-item">
                 <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sauvage" class="collection-img">
                 <div class="collection-info">
+                    <span class="badge">№1 Мужской</span>
                     <h3>Sauvage</h3>
-                    <p>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса. Воплощение свободы и дикой природы.</p>
-                    <div class="price">от 7 900 ₽</div>
+                    <p>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса.</p>
+                    <div class="price">7 900 ₽</div>
                 </div>
             </div>
             
             <div class="collection-item">
                 <img src="https://images.unsplash.com/photo-1543858741-6c2b3a4c7205?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Miss Dior" class="collection-img">
                 <div class="collection-info">
+                    <span class="badge">№2 Женский</span>
                     <h3>Miss Dior</h3>
-                    <p>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры. Идеальное сочетание смелости и нежности.</p>
-                    <div class="price">от 9 200 ₽</div>
+                    <p>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры.</p>
+                    <div class="price">9 200 ₽</div>
                 </div>
             </div>
             
             <div class="collection-item">
                 <img src="https://images.unsplash.com/photo-1590736969956-6d9c2a8d6975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Homme" class="collection-img">
                 <div class="collection-info">
+                    <span class="badge">№2 Мужской</span>
                     <h3>Homme</h3>
-                    <p>Утонченный мужской аромат с древесными и пряными нотами. Сочетает в себе элегантность и современность.</p>
-                    <div class="price">от 8 100 ₽</div>
+                    <p>Утонченный мужской аромат с древесными и пряными нотами.</p>
+                    <div class="price">8 100 ₽</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Perfume -->
-    <section class="container">
-        <div class="featured">
-            <div class="featured-img"></div>
-            <div class="featured-info">
-                <h2>SAUVAGE ELIXIR</h2>
-                <p>Новейшая интерпретация культового аромата Sauvage. Более интенсивная, богатая и стойкая версия с нотами лаванды, бергамота и сандала.</p>
-                <p>Elixir раскрывает новые грани оригинального аромата, предлагая более глубокое и продолжительное звучание. Идеальный выбор для особых случаев.</p>
-                <a href="bestsellers.html" class="btn">Узнать больше</a>
             </div>
         </div>
     </section>
