@@ -2,79 +2,41 @@
 <rss version="2.0">
     <channel>
         <title>Dior - Мир парфюмерии</title>
-        <link>https://dior-ru.com/</link>
+        <link>https://shablon-2fc7.vercel.app/</link>
+        <language>ru</language>
         <description>Официальный блог парфюмерии Dior</description>
-        <image>https://dior-ru.com/favicon.ico</image>
-        <lastBuildDate>Sat, 13 Mar 2026 12:00:00 +0300</lastBuildDate>
+        <lastBuildDate>Fri, 13 Mar 2026 15:30:00 +0300</lastBuildDate>
         
         <item>
             <title>J'adore Dior: История культового аромата</title>
-            <link>https://dior-ru.com/collections.html</link>
-            <description>Цветочный аромат с нотами иланг-иланга, розы и жасмина. Символ женственности и элегантности.</description>
-            <author>Dior</author>
+            <link>https://shablon-2fc7.vercel.app/collections.html</link>
+            <description>Цветочный аромат, сочетающий в себе ноты иланг-иланга, розы и жасмина. Символ женственности и элегантности.</description>
+            <pubDate>Mon, 09 Mar 2026 10:00:00 +0300</pubDate>
+            <guid>https://shablon-2fc7.vercel.app/collections.html</guid>
         </item>
         
         <item>
-            <title>Sauvage: Аромат дикой природы</title>
-            <link>https://dior-ru.com/bestsellers.html</link>
-            <description>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса.</description>
-            <author>Dior</author>
+            <title>Sauvage: Аромат дикой природы и свободы</title>
+            <link>https://shablon-2fc7.vercel.app/bestsellers.html</link>
+            <description>Свежий, пряный аромат для мужчин с нотами бергамота, амбры и папируса. Воплощение свободы и дикой природы.</description>
+            <pubDate>Tue, 10 Mar 2026 12:30:00 +0300</pubDate>
+            <guid>https://shablon-2fc7.vercel.app/bestsellers.html</guid>
         </item>
-        
+
         <item>
-            <title>Miss Dior: Сочетание смелости и нежности</title>
-            <link>https://dior-ru.com/collections.html</link>
-            <description>Модернистский цветочный аромат с нотами гальбанума, пачули и амбры.</description>
-            <author>Dior</author>
+            <title>Как выбрать идеальный аромат Dior?</title>
+            <link>https://shablon-2fc7.vercel.app/about.html</link>
+            <description>Советы по выбору парфюма под свой тип, случай и настроение. Гид по парфюмерным нотам.</description>
+            <pubDate>Sat, 07 Mar 2026 13:10:00 +0300</pubDate>
+            <guid>https://shablon-2fc7.vercel.app/about.html</guid>
         </item>
-        
+
         <item>
-            <title>Sauvage Elixir: Новая версия</title>
-            <link>https://dior-ru.com/bestsellers.html</link>
-            <description>Интенсивная версия с нотами лаванды, бергамота и сандала.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>Как выбрать аромат Dior?</title>
-            <link>https://dior-ru.com/about.html</link>
-            <description>Советы по выбору парфюма под свой тип и настроение.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>История дома Dior</title>
-            <link>https://dior-ru.com/about.html</link>
-            <description>75 лет истории: от New Look до парфюмерной империи.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>Бутики Dior в Москве</title>
-            <link>https://dior-ru.com/contact.html</link>
-            <description>Адреса официальных бутиков и контактная информация.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>Топ-5 женских ароматов</title>
-            <link>https://dior-ru.com/bestsellers.html</link>
-            <description>Рейтинг популярных женских ароматов: J'adore, Miss Dior, Poison.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>Топ-5 мужских ароматов</title>
-            <link>https://dior-ru.com/bestsellers.html</link>
-            <description>Лучшие мужские ароматы: Sauvage, Homme, Fahrenheit.</description>
-            <author>Dior</author>
-        </item>
-        
-        <item>
-            <title>Poison: Магия и соблазн</title>
-            <link>https://dior-ru.com/collections.html</link>
-            <description>Загадочный аромат с нотами пряностей, меда и ягод.</description>
-            <author>Dior</author>
+            <title>Бутики Dior в Москве: адреса и контакты</title>
+            <link>https://shablon-2fc7.vercel.app/contact.html</link>
+            <description>Официальные бутики Dior в Москве. Адрес на Тверской, 10, режим работы, телефоны и email.</description>
+            <pubDate>Mon, 02 Mar 2026 10:00:00 +0300</pubDate>
+            <guid>https://shablon-2fc7.vercel.app/contact.html</guid>
         </item>
     </channel>
 </rss>
